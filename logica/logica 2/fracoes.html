@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<script>
+	    function desenhaQuadradoVerde(x) {
+
+	var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+	pincel.fillStyle = 'green';
+    pincel.fillRect(x, 0, 50, 50);
+    pincel.strokeStyle = 'black';
+    pincel.strokeRect(x, 0, 50, 50);
+
+}
+
+	var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');n
+	function desenhaQuadrado(x, y, tamanho,) {
+    	// aqui precisamos usar fillRect, strokeRect, etc
+    	
+    	for (var i =  0 ; i < x ; i++){
+
+    		pincel.fillStyle = 'white';
+			pincel.fillRect(xi + 50, 0, tamanho, tamanho);
+
+
+    	}
+    	for (var i = 0; i < y; i++) {
+
+    		pincel.strokeStyle = 'black';
+			pincel.strokeRect(xi + 50, 0, tamanho, tamanho);
+
+    	}
+	}
+
+	desenhaQuadrado(3 , 4, 50);
+
+
+
+</script>

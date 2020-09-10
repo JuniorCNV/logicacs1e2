@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<script>
+	var anoInicial =  1500;
+	var anoAtual = 2020;
+	var result = (anoAtual - anoInicial)/28;
+
+	function puloDeLinha() {
+		document.write("<br><hr><br>");
+	}
+	function mostra(texto){
+		document.write("<big>" + texto + "</big>");
+		puloDeLinha()
+	}
+
+	mostra("<big><h1> geracoes </h1></big>")
+	mostra("o ano ano atual é de " + anoAtual);
+	mostra("a qauntidade de geracoes arredondada são de " + Math.round(result));
+	mostra("a qauntidade de geracoes exata são de " + result);
+
+</script>

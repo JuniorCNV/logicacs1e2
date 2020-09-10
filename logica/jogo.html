@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+	
+	function jumpLine() {
+		document.write("<br>");
+	}
+	function mostrar(texto){
+		document.write(texto);
+	}
+	
+	var tentativas = 0;
+	var chances = 3;
+
+	while(tentativas <= chances){
+		var numeroAleatorioDaSorte = Math.round(Math.random()*10);
+		var palpideDoUsuario = parseInt(prompt("ja pensei, agora insira seu palpite sobre o proximo numero"));
+		if ( palpideDoUsuario == numeroAleatorioDaSorte){
+			alert("PARABENS VOCE ACERTOU!!! O NUMERO QUE PENSEI FOI " +numeroAleatorioDaSorte);
+			break;
+		}else{
+			alert("VOCE ERROU, O NUMERO DA SORTE ERA " + numeroAleatorioDaSorte + " E VOCE CHUTOU O "+ palpideDoUsuario +" TENTE NOVAMENTE!" + " voce so tem direito a 3 tentativas e ja usou " + (tentativas + 1) +"º");
+			jumpLine();
+		}
+		tentativas++;
+	}
+	mostrar("FIM");
+
+</script>
+

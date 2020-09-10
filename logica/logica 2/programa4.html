@@ -1,0 +1,61 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var caneta = tela.getContext('2d');
+    caneta.fillStyle = 'lightgray';
+    caneta.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x, y, raio) {
+
+        caneta.fillStyle = 'blue';
+        caneta.beginPath();
+        caneta.arc(x, y, raio, 0, 2 * Math.PI);
+        caneta.fill();
+    }
+
+    function limpaTela (){
+
+    	caneta.clearRect(0, 0, 600, 400);
+
+    }
+
+    var raio = 20; 
+    var raioMin = 20;
+    var raioMax = 30;
+
+
+
+    var x = 20;
+    var sentido  =  1;
+
+    function exibirBola() {
+    
+    	limpaTela();
+		desenhaCirculo(x, 20, raio);
+		if (raio <= raioMax) {
+
+			raio = raio + 1
+			
+		}else if(raio >= raioMin){
+			raio = raio -1;
+		}
+
+
+		x = x + sentido;
+
+		if (x > 550){
+
+			sentido = -1;
+
+		}else if (x < 0  ){
+
+			sentido = 1;
+
+		}
+
+	}
+
+	setInterval(exibirBola, 20);
+</script>
